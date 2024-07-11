@@ -10,7 +10,7 @@ class BoardController extends Controller
     public function index()
     {
         $boards = Board::all();
-        return view('boards.index', compact('boards'));
+        return view('boards.board', compact('boards'));
     }
 
     public function store(Request $request)
