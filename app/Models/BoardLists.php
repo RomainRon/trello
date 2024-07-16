@@ -8,16 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class BoardLists extends Model
 {
     use HasFactory;
-
+    protected $table = 'boardlists';
     protected $fillable = ['title', 'board_id'];
 
     public function boards()
     {
-        return $this->belongsTo(Boards::class);
+        return $this->belongsTo(Board::class);
     }
 
     public function cards()
     {
-        return $this->hasMany(Cards::class);
+        return $this->hasMany(Cards::class , 'boardlist_id');
     }
+
 }

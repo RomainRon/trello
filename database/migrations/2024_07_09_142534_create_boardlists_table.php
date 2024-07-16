@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('boardlists', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->integer('position');
+            $table->integer('position')->default(0);
             $table->foreignId('board_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
