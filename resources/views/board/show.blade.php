@@ -8,7 +8,7 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex justify-center">
-            <a href="{{ route('boardLists.create', ['board' => $board->id]) }}" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
+            <a href="{{ route('boards.lists.create', $board->id) }}" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
                 {{ __('Créer une liste') }}
             </a>
         </div>

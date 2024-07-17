@@ -9,7 +9,8 @@ class BoardLists extends Model
 {
     use HasFactory;
     protected $table = 'boardlists';
-    protected $fillable = ['title', 'board_id'];
+    protected $fillable = ['title', 'board_id', 'position'];
+
 
     public function boards()
     {
